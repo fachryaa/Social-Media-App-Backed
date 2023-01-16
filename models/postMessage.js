@@ -10,11 +10,15 @@ const postSchema = mongoose.Schema({
     type: [String],
     default: []
   },
+  selectedFile: String,
+  comments: {
+    type: [String],
+    default: []
+  },
   createdAt: {
     type: Date,
     default: new Date()
   },
-  selectedFile: String
 })
 
 const PostMessage = mongoose.model('PostMessage', postSchema);
